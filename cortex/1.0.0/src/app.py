@@ -61,7 +61,7 @@ class Cortex(AppBase):
                     'dataType': datatype,
                     'tlp': tlp,
                     'message': message,
-                }, force=1)
+                }, force=0)
 
                 alljobs.append(job.id)
             except cortex4py.exceptions.ServiceUnavailableError as e:
@@ -83,7 +83,7 @@ class Cortex(AppBase):
                 'dataType': datatype,
                 'tlp': tlp,
                 'message': message,
-            }, force=1)
+            }, force=0)
         except cortex4py.exceptions.ServiceUnavailableError as e:
             return str(e)
         except cortex4py.exceptions.AuthorizationError as e:
