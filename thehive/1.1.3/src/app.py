@@ -413,10 +413,6 @@ class TheHive(AppBase):
     def create_case_from_alert(
         self, apikey, url, organisation, alert_id, case_template=None
     ):
-        print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAapikey:  ", apikey)
-        print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAurl:  ", url)
-        print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOrg:  ", organisation)
-        print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlertID:   ", alert_id) 
         self.__connect_thehive(url, apikey, organisation)
         
         response = self.thehive.promote_alert_to_case(
